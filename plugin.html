@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index,follow" /> 
+    <title>Demo | jQuery.popeye 2.0 | an inline lightbox alternative</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/site/site.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/popeye/jquery.popeye.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/popeye/jquery.popeye.style.css" media="screen" />
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/popeye/jquery.popeye-2.0.4.min.js"></script>
+
+</head>
+<body>
+<div id="page-margins">
+    <div id="header">
+        <h1>jQuery.<span class="logo">popeye</span> 2.0</h1>
+        <p class="claim">an inline lightbox alternative</p>
+    </div>
+    
+    <div class="example">
+        
+        <div class="ppy" id="ppy1">
+            <ul class="ppy-imglist">
+                <li>
+                    <a href="http://farm4.static.flickr.com/3461/3760102198_0e3de1eec3.jpg">
+                        <img src="http://farm4.static.flickr.com/3461/3760102198_0e3de1eec3_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>Eyes of a Holcocephala fusca Robber Fly</strong><br />shot by flickr member Thomas Shahan<br />
+                        <a href="http://www.flickr.com/photos/opoterser/3760102198/">View on flickr.com</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="http://farm3.static.flickr.com/2372/2175199426_a54827f5e6.jpg">
+                        <img src="http://farm3.static.flickr.com/2372/2175199426_a54827f5e6_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>Dolichopodids, fairly small, metallic flies with large, prominent eyes</strong><br />shot by flickr member williamcho<br />
+                        <a href="http://www.flickr.com/photos/adforce1/2175199426/">View on flickr.com</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="http://farm2.static.flickr.com/1317/908814138_9fa713a687.jpg">
+                        <img src="http://farm2.static.flickr.com/1317/908814138_9fa713a687_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>Crocodile's eye</strong><br />shot by flickr member Tambako the Jaguar<br />
+                        <a href="http://www.flickr.com/photos/tambako/908814138/">View on flickr.com</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="http://farm4.static.flickr.com/3357/3633927491_d8864d5235.jpg">
+                        <img src="http://farm4.static.flickr.com/3357/3633927491_d8864d5235_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>Daipeem</strong><br />shot by flickr member Furryscaly<br />
+                        <a href="http://www.flickr.com/photos/furryscalyman/3633927491">View on flickr.com</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="http://farm4.static.flickr.com/3335/3198858060_365ce0ba53.jpg">
+                        <img src="http://farm4.static.flickr.com/3335/3198858060_365ce0ba53_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>basiliscus plumifrons</strong><br />shot by flickr member Joachim S. Müller<br />
+                        <a href="http://www.flickr.com/photos/joachim_s_mueller/3198858060/in/set-72157612281941653/">View on flickr.com</a>
+                    </span>
+                </li>
+                <li>
+                    <a href="http://farm3.static.flickr.com/2597/4162969117_cbbc452a26.jpg">
+                        <img src="http://farm3.static.flickr.com/2597/4162969117_cbbc452a26_m.jpg" alt="" />
+                    </a>
+                    <span class="ppy-extcaption">
+                        <strong>Eyes of Jumping spider</strong><br />shot by flickr member Lukjonis<br />
+                        <a href="http://www.flickr.com/photos/38628972@N05/4162969117/">View on flickr.com</a>
+                    </span>
+                </li>
+            </ul>
+            <div class="ppy-outer">
+                <div class="ppy-stage">
+                    <div class="ppy-nav">
+                        <a class="ppy-prev" title="Previous image">Previous image</a>
+                        <a class="ppy-switch-enlarge" title="Enlarge">Enlarge</a>
+                        <a class="ppy-switch-compact" title="Close">Close</a>
+                        <a class="ppy-next" title="Next image">Next image</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ppy-caption">
+                <div class="ppy-counter">
+                    Image <strong class="ppy-current"></strong> of <strong class="ppy-total"></strong> 
+                </div>
+                <span class="ppy-text"></span>
+            </div>
+        </div>
+        <h2>Example 1</h2>
+        <p>The first popeye-box uses the standard options: it floats to the left and opens to the right, its navigation and caption show on mouseover. The caption displays the html code inside the <code>&lt;span class="ppy-extcaption"&gt;</code>.</p>
+        <p>By placing the navigation inside the stage area (where the image is displayed), we can get it to hover above the image.</p>
+        <p class="mute">No need to read this, just dummy text ;-) Vivamus ut nisi id libero interdum pretium. Vestibulum lorem. Sed suscipit justo at lectus. Ut viverra eros in urna. Pellentesque augue libero, bibendum eu, pellentesque a, convallis vitae, neque. Duis vel leo et mauris laoreet porttitor. Fusce venenatis libero a elit. Nunc tincidunt, mi id ornare rhoncus, elit purus suscipit neque, ut semper quam leo vel dolor. Aenean ultrices. Pellentesque vel purus. Maecenas ultricies ipsum at libero. Aenean sed turpis. Mauris eleifend, lectus tempus hendrerit dignissim, odio sem interdum pede, at tristique urna ligula vitae eros. Proin feugiat consequat tellus. Morbi odio lectus, pharetra ac, auctor eu, rutrum vel, dui. Sed nec lectus ac velit sollicitudin pharetra. Pellentesque magna nunc, tincidunt vitae, iaculis quis, convallis hendrerit, enim. Nam eu mauris non odio sollicitudin cursus. Nulla hendrerit.</p>
+        <h3><a href="#pre1" class="toggler">View HTML code used in this example</a></h3>
+        <pre id="pre1" class="toggle">
+&lt;div class=&quot;ppy-outer&quot;&gt;
+    &lt;div class=&quot;ppy-stage&quot;&gt;
+        &lt;div class=&quot;ppy-nav&quot;&gt;
+            &lt;a class=&quot;ppy-prev&quot; title=&quot;Previous image&quot;&gt;Previous image&lt;/a&gt;
+            &lt;a class=&quot;ppy-switch-enlarge&quot; title=&quot;Enlarge&quot;&gt;Enlarge&lt;/a&gt;
+            &lt;a class=&quot;ppy-switch-compact&quot; title=&quot;Close&quot;&gt;Close&lt;/a&gt;
+            &lt;a class=&quot;ppy-next&quot; title=&quot;Next image&quot;&gt;Next image&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ppy-caption&quot;&gt;
+    &lt;div class=&quot;ppy-counter&quot;&gt;
+        Image &lt;strong class=&quot;ppy-current&quot;&gt;&lt;/strong&gt; of &lt;strong class=&quot;ppy-total&quot;&gt;&lt;/strong&gt; 
+    &lt;/div&gt;
+    &lt;span class=&quot;ppy-text&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    
+    <div class="example">
+        <h2>Example 2</h2>
+        <div class="ppy" id="ppy2">
+            <ul class="ppy-imglist">
+                <li><a href="http://farm2.static.flickr.com/1428/1387537684_c1ce69e15a.jpg"><img src="http://farm2.static.flickr.com/1428/1387537684_c1ce69e15a_m.jpg" alt="yankee stadium shot by flickr member andre stoeriko" /></a></li>
+                <li><a href="http://farm1.static.flickr.com/243/516200107_08d8e90a7f.jpg"><img src="http://farm1.static.flickr.com/243/516200107_08d8e90a7f_m.jpg" alt="Up There, shot by flickr member Nils Geylen" /></a></li>
+                <li><a href="http://farm2.static.flickr.com/1230/587925720_95a59f71f3.jpg"><img src="http://farm2.static.flickr.com/1230/587925720_95a59f71f3_m.jpg" alt="99 Luftballons, shot by flickr member Iguana Jo" /></a></li>
+                <li><a href="http://farm2.static.flickr.com/1077/1362086820_0e15e9a21e.jpg"><img src="http://farm2.static.flickr.com/1077/1362086820_0e15e9a21e_m.jpg" alt="The english bikers, shot by flickr member diebmx" /></a></li>
+                <li><a href="http://farm1.static.flickr.com/106/285870495_e1292924fd.jpg"><img src="http://farm1.static.flickr.com/106/285870495_e1292924fd_m.jpg" alt="Soar, shot by flickr member Brian Hathcock" /></a></li>
+                <li><a href="http://farm1.static.flickr.com/144/405993690_5c5838a6d4.jpg"><img src="http://farm1.static.flickr.com/144/405993690_5c5838a6d4_m.jpg" alt="Acephalous, shot by flickr member wilhei55" /></a></li>
+                <li><a href="http://farm2.static.flickr.com/1026/1405752274_fa0dd74922.jpg"><img src="http://farm2.static.flickr.com/1026/1405752274_fa0dd74922_m.jpg" alt="Always Reaching, shot by flickr member ecstaticist" /></a></li>
+                <li><a href="http://farm2.static.flickr.com/1021/531198146_57e1fd9541.jpg"><img src="http://farm2.static.flickr.com/1021/531198146_57e1fd9541_m.jpg" alt="dive buddy, shot by flickr member leafbug" /></a></li>
+                <li><a href="http://farm2.static.flickr.com/1134/593106554_1e3b2bda73.jpg"><img src="http://farm2.static.flickr.com/1134/593106554_1e3b2bda73_m.jpg" alt="True Blue, shot by flickr member welshbaloney" /></a></li>
+            </ul>
+            <div class="ppy-outer">
+                <div class="ppy-stage">
+                    <div class="ppy-counter">
+                        <strong class="ppy-current"></strong> / <strong class="ppy-total"></strong> 
+                    </div>
+                </div>
+                <div class="ppy-nav">
+                    <div class="nav-wrap">
+                        <a class="ppy-next" title="Next image">Next image</a>
+                        <a class="ppy-prev" title="Previous image">Previous image</a>
+                        <a class="ppy-switch-enlarge" title="Enlarge">Enlarge</a>
+                        <a class="ppy-switch-compact" title="Close">Close</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>The second popeye-box has the following user-defined options: <code>direction:  'left'</code> - open to the left. <code>caption: false</code> - do not display captions (even though the images have alt tags with text). <code>navigation: 'permanent'</code> - the navigation is always visible.</p>
+        <p>The navigation stays fixed to the right of the image. Absolute poisitioning plays a key role in displaying the navigation wherever you want - to the left, right, below or above the image.</p>
+        <p class="mute">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras euismod risus non diam. Proin et neque. Fusce molestie eros et urna. Aliquam sed enim nec lacus bibendum suscipit. Sed varius, quam nec aliquam sagittis, risus sapien luctus nisi, sit amet convallis risus metus a mauris. Curabitur aliquam ultrices est. Pellentesque felis. Mauris luctus orci id justo. Mauris tincidunt massa nec pede. Proin auctor suscipit augue.</p>
+        <p class="mute">Vivamus ut nisi id libero interdum pretium. Vestibulum lorem. Sed suscipit justo at lectus. Ut viverra eros in urna. Pellentesque augue libero, bibendum eu, pellentesque a, convallis vitae, neque. Duis vel leo et mauris laoreet porttitor. Fusce venenatis libero a elit. Nunc tincidunt, mi id ornare rhoncus, elit purus suscipit neque, ut semper quam leo vel dolor. Aenean ultrices. Pellentesque vel purus. Maecenas ultricies ipsum at libero. Aenean sed turpis. Mauris eleifend, lectus tempus hendrerit dignissim, odio sem interdum pede, at tristique urna ligula vitae eros. Proin feugiat consequat tellus. Morbi odio lectus, pharetra ac, auctor eu, rutrum vel, dui. Sed nec lectus ac velit sollicitudin pharetra. Pellentesque magna nunc, tincidunt vitae, iaculis quis, convallis hendrerit, enim. Nam eu mauris non odio sollicitudin cursus. Nulla hendrerit.</p>
+        <h3><a href="#pre2" class="toggler">View HTML code used in this example</a></h3>
+        <pre id="pre2" class="toggle">
+&lt;div class=&quot;ppy-outer&quot;&gt;
+    &lt;div class=&quot;ppy-stage-wrap&quot;&gt;
+        &lt;div class=&quot;ppy-stage&quot;&gt;
+            &lt;div class=&quot;ppy-counter&quot;&gt;
+                &lt;strong class=&quot;ppy-current&quot;&gt;&lt;/strong&gt; / &lt;strong class=&quot;ppy-total&quot;&gt;&lt;/strong&gt; 
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;ppy-nav&quot;&gt;
+        &lt;div class=&quot;ppy-nav-wrap&quot;&gt;
+            &lt;a class=&quot;ppy-next&quot; title=&quot;Next image&quot;&gt;Next image&lt;/a&gt;
+            &lt;a class=&quot;ppy-prev&quot; title=&quot;Previous image&quot;&gt;Previous image&lt;/a&gt;
+            &lt;a class=&quot;ppy-switch-enlarge&quot; title=&quot;Enlarge&quot;&gt;Enlarge&lt;/a&gt;
+            &lt;a class=&quot;ppy-switch-compact&quot; title=&quot;Close&quot;&gt;Close&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+    </div>
+    <div class="example">
+        <div class="ppy" id="ppy3">
+            <ul class="ppy-imglist">
+                <li><a href="http://farm4.static.flickr.com/3142/3053892214_390c0365df.jpg"><img src="http://farm4.static.flickr.com/3142/3053892214_390c0365df_m.jpg" alt="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras euismod risus non diam." /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3014/3053902638_7871e32230.jpg"><img src="http://farm4.static.flickr.com/3014/3053902638_7871e32230_m.jpg" alt="In tempus consequat purus. Curabitur in massa nec purus semper adipiscing. Donec convallis odio nec nibh. Nam viverra, tortor nec cursus accumsan, purus purus ultricies mauris, in dignissim orci dui at est. Morbi non quam at ante cursus posuere. Sed ornare sem vitae diam tempor blandit. Nam risus diam, faucibus eget, fermentum et, dignissim eu, tellus. Praesent non justo. Proin vestibulum diam at mi. Cras molestie eleifend mi. Morbi massa enim, auctor at, rhoncus nec, consequat nec, diam. In laoreet lacus vel velit. Sed vulputate commodo ligula." /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3136/3053075339_ca3f303a6d.jpg"><img src="http://farm4.static.flickr.com/3136/3053075339_ca3f303a6d_m.jpg" alt="Sed consequat tincidunt sapien." /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3234/3053054359_090927b527.jpg"><img src="http://farm4.static.flickr.com/3234/3053054359_090927b527_m.jpg" alt="Proin aliquam libero ac lectus. Sed consequat tincidunt sapien. Suspendisse hendrerit porta ante. Proin aliquam libero ac lectus. Sed consequat tincidunt sapien. Suspendisse hendrerit porta ante." /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3161/3053878060_16a1ed4786.jpg"><img src="http://farm4.static.flickr.com/3161/3053878060_16a1ed4786_m.jpg" alt="Aenean tristique pellentesque quam. Proin aliquam libero ac lectus." /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3247/3053897646_df5b74c794.jpg"><img src="http://farm4.static.flickr.com/3247/3053897646_df5b74c794_m.jpg" alt="" /></a></li>
+                <li><a href="http://farm4.static.flickr.com/3225/3053039525_2d3ef0c58e.jpg"><img src="http://farm4.static.flickr.com/3225/3053039525_2d3ef0c58e_m.jpg" alt="Suspendisse hendrerit porta ante." /></a></li>
+            </ul>
+            <div class="ppy-outer">
+                <div class="ppy-stage">
+                    <div class="ppy-nav">
+                        <div class="nav-wrap">
+                            <a class="ppy-prev" title="Previous image">Previous image</a>
+                            <a class="ppy-switch-enlarge" title="Enlarge">Enlarge</a>
+                            <a class="ppy-switch-compact" title="Close">Close</a>
+                            <a class="ppy-next" title="Next image">Next image</a>
+                        </div>
+                    </div>
+                    <div class="ppy-counter">
+                        <strong class="ppy-current"></strong> / <strong class="ppy-total"></strong> 
+                    </div>
+                </div>
+                <div class="ppy-caption">
+                    <span class="ppy-text"></span>
+                </div>
+            </div>
+        </div>
+        
+        <h2>Example 3</h2>
+        <p class="mute">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras euismod risus non diam. Proin et neque. Fusce molestie eros et urna. Aliquam sed enim nec lacus bibendum suscipit. Sed varius, quam nec aliquam sagittis, risus sapien luctus nisi, sit amet convallis risus metus a mauris. Curabitur aliquam ultrices est. Pellentesque felis. Mauris luctus orci id justo. Mauris tincidunt massa nec pede. Proin auctor suscipit augue.</p>
+        <p class="mute">Vivamus ut nisi id libero interdum pretium. Vestibulum lorem. Sed suscipit justo at lectus. Ut viverra eros in urna. Pellentesque augue libero, bibendum eu, pellentesque a, convallis vitae, neque. Duis vel leo et mauris laoreet porttitor. Fusce venenatis libero a elit. Nunc tincidunt, mi id ornare rhoncus, elit purus suscipit neque, ut semper quam leo vel dolor. Aenean ultrices. Pellentesque vel purus. Maecenas ultricies ipsum at libero. Aenean sed turpis. Mauris eleifend, lectus tempus hendrerit dignissim, odio sem interdum pede, at tristique urna ligula vitae eros. Proin feugiat consequat tellus. Morbi odio lectus, pharetra ac, auctor eu, rutrum vel, dui. Sed nec lectus ac velit sollicitudin pharetra. Pellentesque magna nunc, tincidunt vitae, iaculis quis, convallis hendrerit, enim. Nam eu mauris non odio sollicitudin cursus. Nulla hendrerit.</p>
+        <p class="mute">Nam viverra, tortor nec cursus accumsan, purus purus ultricies mauris, in dignissim orci dui at est. Morbi non quam at ante cursus posuere. Sed ornare sem vitae diam tempor blandit. Nam risus diam, faucibus eget, fermentum et, dignissim eu, tellus. Praesent non justo. Proin vestibulum diam at mi. Cras molestie eleifend mi. Morbi massa enim, auctor at, rhoncus nec, consequat nec, diam. In laoreet lacus vel velit. Sed vulputate commodo ligula.</p>
+        <p class="mute">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras euismod risus non diam. Proin et neque. Fusce molestie eros et urna. Aliquam sed enim nec lacus bibendum suscipit. Sed varius, quam nec aliquam sagittis, risus sapien luctus nisi, sit amet convallis risus metus a mauris. Curabitur aliquam ultrices est. Pellentesque felis. Mauris luctus orci id justo. Mauris tincidunt massa nec pede. Proin auctor suscipit augue.</p>
+        <p class="mute">Vivamus ut nisi id libero interdum pretium. Vestibulum lorem. Sed suscipit justo at lectus. Ut viverra eros in urna. Pellentesque augue libero, bibendum eu, pellentesque a, convallis vitae, neque. Duis vel leo et mauris laoreet porttitor. Fusce venenatis libero a elit. Nunc tincidunt, mi id ornare rhoncus, elit purus suscipit neque, ut semper quam leo vel dolor. Aenean ultrices. Pellentesque vel purus. Maecenas ultricies ipsum at libero. Aenean sed turpis. Mauris eleifend, lectus tempus hendrerit dignissim, odio sem interdum pede, at tristique urna ligula vitae eros. Proin feugiat consequat tellus. Morbi odio lectus, pharetra ac, auctor eu, rutrum vel, dui. Sed nec lectus ac velit sollicitudin pharetra. Pellentesque magna nunc, tincidunt vitae, iaculis quis, convallis hendrerit, enim. Nam eu mauris non odio sollicitudin cursus. Nulla hendrerit.</p>
+        <p class="mute">Nam viverra, tortor nec cursus accumsan, purus purus ultricies mauris, in dignissim orci dui at est. Morbi non quam at ante cursus posuere. Sed ornare sem vitae diam tempor blandit. Nam risus diam, faucibus eget, fermentum et, dignissim eu, tellus. Praesent non justo. Proin vestibulum diam at mi. Cras molestie eleifend mi. Morbi massa enim, auctor at, rhoncus nec, consequat nec, diam. In laoreet lacus vel velit. Sed vulputate commodo ligula.</p>
+    
+        <!-- 
+        |
+        | BEGIN Donate
+        |
+        |
+         -->
+        <div id="donate">
+            <h5>Donate</h5>
+            <p>If you really, really like the plugin and consider it worth a couple of bucks, you can donate whatever you like via PayPal.</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <fieldset>
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="6GG57SN53Y22U" />
+                    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                    <img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    
+    <div class="legal">
+        <p>All flickr photos used in the demonstration are released under Creative Commons 2.0 and, if they were not taken by Christoph Schüßler, they are attributed to the photographers in the source code. The icon set used in the link buttons is <a href="http://pictoico.com/">Pictoico</a> by <a href="http://www.lukapensa.com">Luka Pensa</a>. jQuery.popeye is free software released under the <a href="http://creativecommons.org/licenses/GPL/2.0/">GPL 2.0</a>. This site is maintained by Christoph Schüßler, E-Mail: <a href="mailto:schreib@herr-schuessler.de">schreib@herr-schuessler.de</a>, Web: <a href="http://herr-schuessler.de">herr-schuessler.de</a>.</p>
+    </div>
+</div>
+
+
+<!-- [example js] begin -->
+<script type="text/javascript">
+    <!--//<![CDATA[
+    
+    $(document).ready(function () {
+        var options2 = {
+            caption:    false,
+            navigation: 'permanent',
+            direction:  'left'
+        }
+        var options3 = {
+            caption:    'permanent',
+            opacity:    1
+        }
+    
+        $('#ppy1').popeye();
+        $('#ppy2').popeye(options2);
+        $('#ppy3').popeye(options3);
+    });
+    
+    //]]>-->
+</script>
+<!-- [example js] end -->
+
+</body>
+</html>    

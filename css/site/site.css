@@ -1,0 +1,263 @@
+/*
+ * site.css 2.0
+ *
+ * styles for jQuery.popeye demo page 
+ *
+ * Copyright (C) 2010 Christoph Schuessler (schreib@herr-schuessler.de)
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ */
+body {
+    margin:         0;
+    font:           normal 0.8em/1.4em 'Segoe UI', Tahoma, Arial, 'Lucida Grande', Verdana, Helvetica, sans-serif;
+    background:     #fafafa url(../gfx/site/bg.jpg);
+    color:          #5b5b5b;
+}
+html, body {
+    padding:        0 0 1px 0;
+    height:         100%;
+}
+code, pre {
+    font:           normal 1em/1.4em Consolas,
+                    "Andale Mono",
+                    "Lucida Console",
+                    "Lucida Sans Typewriter",
+                    "DejaVu Sans Mono",
+                    "Bitstream Vera Sans Mono",
+                    "Liberation Mono",
+                    "Nimbus Mono L",
+                    Monaco,
+                    "Courier New",
+                    Courier,
+                    monospace;
+}
+code {
+    color:          #000;
+}
+pre {
+    padding:        10px;
+    background:     #fdfdfd;
+    background:     rgba(255,255,255,0.8);
+    color:          #2d82ac;
+}
+pre.toggle {
+    display:        none;
+}
+h1 {
+    font:           bold 2.8em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica, sans-serif;
+    color:          #999;
+    margin:         0;
+    padding:        1em 0 0.2em 0;
+}
+h2 {
+    font:           bold 1.4em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica, sans-serif;
+    color:          #777;
+    border-radius:          7px;
+    -moz-border-radius:     7px;
+    -webkit-border-radius:  7px;
+    padding:        5px 10px;
+    display:        inline-block;
+    background:     #fff;
+    margin:         0;
+}
+h3 {
+    font:           bold 1.2em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica, sans-serif;
+    color:          #5b5b5b;
+}
+h4 {
+    font:           bold 1em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica, sans-serif;
+    color:          #5b5b5b;
+}
+h5 {
+    font:           bold 1em/1.2em 'Segoe UI', 'Lucida Grande', Arial, Helvetica, sans-serif;
+    color:          #5b5b5b;
+    margin:         0;
+}
+p + h2,
+ol + h2 {
+    margin-top:     1em;
+}
+a {
+    color:          #0593da;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:focus, a:active {
+  outline:          none;
+}
+fieldset {
+    border:         0;
+    margin:         0;
+    padding:        0;
+}
+#sketch {
+    float:          left;
+    margin:         0 1em 1em 0;
+}
+#flattr {
+    position:       absolute;
+    right:          0;
+    top:            40px;
+}
+#donate {
+    padding:        10px;
+    border:         1px solid #eee;
+    border-bottom:  0;
+    margin:         3em 0 0 0;
+}
+#page-margins {
+    width:          900px;
+    margin:         0 auto;
+    padding:        0 0 3em 0;
+}
+#header {
+    border-bottom:  3px solid #ddd;
+    margin:         0 0 3em 0;
+    overflow:       hidden;
+    position:       relative;
+}
+.mute {
+    font-weight:    normal;
+    color:          #9c9c9c;
+}
+.hint {
+    border-radius:          1em;
+    -moz-border-radius:     1em;
+    -webkit-border-radius:  1em;
+    margin:         0 0 2em 0;
+    padding:        1em 2em;
+    background:     #ade1fb;
+    color:          #2d82ac;
+}
+.legal {
+    font-size:      0.8em;
+    line-height:    1.2em;
+    color:          #bbb;
+}
+.logo {
+    color:          #5b5b5b;
+}
+.claim {
+    font-size:      1.2em;
+    font-style:     italic;
+    color:          #bbb;
+    margin:         0 0 1em 0;
+}
+.example,
+.body {
+    margin:         0 0 2em 0;
+    border-bottom:  1px solid #ddd;
+}
+#int-links {
+    padding:        0 0 0.5em 0;
+    font-size:      1.4em;
+    margin:         0;
+    float:          right;
+}
+#int-links li {
+    display:        inline;
+    padding:        0 0 0 1em;
+}
+#int-links li a.selected,
+#int-links li a:hover {
+    text-decoration:underline;
+}
+
+#ext-links {
+    width:          224px;
+    float:          right;
+    margin:         0 0 1em 3em;
+    list-style:     none;
+    padding:        0;
+}
+#ext-links li a {
+    display:        block;
+    position:       relative;
+    margin:         0 0 0.5em 0;
+    padding:        10px 10px 10px 44px;
+    min-height:     24px;
+    color:          #fff;
+    font-weight:    bold;
+    border-radius:          1em;
+    -moz-border-radius:     1em;
+    -webkit-border-radius:  1em;
+    background:     #ccc;
+
+}
+#ext-links li a:hover {
+    background:     #838383;
+    background:    -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.2, rgb(131,131,131)),
+        color-stop(0.8, rgb(181,181,181))
+    );
+    background:    -moz-linear-gradient(
+        center bottom,
+        rgb(131,131,131) 20%,
+        rgb(181,181,181) 80%
+    );
+}
+#ext-links li a img {
+    position:       absolute;
+    top:            50%;
+    left:           10px;
+    margin-top:     -12px;
+    border:         0;
+}
+.closer {
+    float:          right;
+    display:        block;
+    border:         2px solid #78c0e4;
+    color:          #78c0e4;
+    font-size:      11px;
+    height:         14px;
+    width:          14px;
+    line-height:    10px;
+    text-align:     center;
+    font-weight:    bold;
+    cursor:         pointer;
+    border-radius:          3px;
+    -moz-border-radius:     3px;
+    -webkit-border-radius:  3px;
+}
+.closer:hover {
+    background:     #fff;
+    color:          #2d82ac;
+}
+.changelog {
+    list-style:     none;
+    padding:        0;
+}
+.table {
+    padding:        10px;
+    width:          620px;
+    border:         1px solid #ddd;
+    margin:         2em 0;
+}
+.table td {
+    padding:        5px;
+}
+.table th {
+    padding:        10px 5px;
+}
+.table th,
+.table td {
+    border:         1px solid #fafafa;
+    background:     #fff;
+}
+.table th {
+    background:     #999;
+    color:          #fff;
+}
+.table .hilite {
+    background:     #ccc;
+}
+
